@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-inter: "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-background: #0a0a0a;
+    --color-background-card: #141414;
+    --color-background-card-hover: #1a1a1a;
+    --color-background-elevated: #1a1a1a;
+    --color-foreground: #fcfbf8;
+    --color-muted: #a1a1a1;
+    --color-primary: #6467f2;
+    --color-primary-20: #6467f233;
+    --color-primary-10: #6467f21a;
+    --color-violet: #8249df;
+    --color-violet-20: #8249df33;
+    --color-violet-10: #8249df1a;
+    --color-green: #21c45d;
+    --color-green-20: #21c45d33;
+    --color-green-10: #21c45d1a;
+    --color-white: #ffffff;
+    --color-border: #292929;
+    --color-border-light: #21212133;
+    --color-overlay: #14141480;
+
+    --container-padding-x: 1rem;
+  }
+
+  * {
+    @apply border-0 m-0 p-0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-inter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .text-h1 {
+    @apply font-extrabold text-4xl md:text-5xl lg:text-[60px] leading-tight tracking-[-1.5px];
+  }
+
+  .text-h2 {
+    @apply font-bold text-3xl lg:text-[36px] leading-[40px] tracking-[-0.9px];
+  }
+
+  .text-h3 {
+    @apply font-semibold text-lg md:text-xl;
+  }
+
+  .text-body-1 {
+    @apply text-lg md:text-xl lg:text-lg font-bold leading-7;
+  }
+
+  .text-body-2 {
+    @apply text-base lg:text-lg;
+  }
+
+  .text-body-3 {
+    @apply text-sm md:text-base;
+  }
+
+  .text-body-4 {
+    @apply text-xs lg:text-sm;
+  }
+}
+
+/* Container and layout utilities */
+.my-container {
+  width: 100%;
+  padding-right: var(--container-padding-x);
+  padding-left: var(--container-padding-x);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.sections-max-width {
+  max-width: 90rem;
+  width: 100%;
+}
+
+/* Responsive container padding */
+@media (width > 724px) {
+  :root {
+    --container-padding-x: 5.12rem;
+  }
+}
+
+@media (width > 1290px) {
+  :root {
+    --container-padding-x: 8rem;
+  }
 }
