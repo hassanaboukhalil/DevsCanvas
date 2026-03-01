@@ -1,0 +1,83 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient: indigo → cyan -->
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <!-- Subtle inner glow -->
+    <linearGradient id="canvasGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#F0F0FF" />
+    </linearGradient>
+    <!-- Shadow filter for canvas -->
+    <filter id="canvasShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#4F46E5" flood-opacity="0.25" />
+    </filter>
+    <!-- Glow filter for accents -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#grad)" />
+
+  <!-- Subtle grid pattern on background (canvas feel) -->
+  <g opacity="0.08">
+    <line x1="128" y1="32" x2="128" y2="480" stroke="white" stroke-width="1" />
+    <line x1="256" y1="32" x2="256" y2="480" stroke="white" stroke-width="1" />
+    <line x1="384" y1="32" x2="384" y2="480" stroke="white" stroke-width="1" />
+    <line x1="32" y1="128" x2="480" y2="128" stroke="white" stroke-width="1" />
+    <line x1="32" y1="256" x2="480" y2="256" stroke="white" stroke-width="1" />
+    <line x1="32" y1="384" x2="480" y2="384" stroke="white" stroke-width="1" />
+  </g>
+
+  <!-- Canvas frame with shadow -->
+  <rect x="120" y="120" width="272" height="272" rx="28" fill="url(#canvasGrad)" filter="url(#canvasShadow)" />
+
+  <!-- Paintbrush / pen tool stroke (creative element) -->
+  <path d="M164 340 Q200 280 240 310 Q280 340 310 280 Q330 240 356 260" 
+        stroke="url(#grad)" stroke-width="10" fill="none" 
+        stroke-linecap="round" stroke-linejoin="round" opacity="0.3" />
+
+  <!-- Code brackets: left < -->
+  <path d="M222 206 L182 264 L222 322" 
+        stroke="#4F46E5" stroke-width="18" fill="none" 
+        stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Code brackets: right > -->
+  <path d="M290 206 L330 264 L290 322" 
+        stroke="#06B6D4" stroke-width="18" fill="none" 
+        stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Slash between brackets (/) -->
+  <line x1="272" y1="198" x2="240" y2="330" 
+        stroke="#7C3AED" stroke-width="10" 
+        stroke-linecap="round" opacity="0.6" />
+
+  <!-- Floating design elements — shapes representing generators -->
+  <!-- Blob accent (top-right) -->
+  <path d="M370 120 Q395 100 405 125 Q415 155 390 155 Q365 155 370 120Z" 
+        fill="#06B6D4" opacity="0.9" filter="url(#glow)" />
+
+  <!-- Gradient swatch (top-left) -->
+  <rect x="105" y="88" width="36" height="36" rx="8" fill="#4F46E5" opacity="0.85" />
+  <rect x="105" y="88" width="36" height="18" rx="8" fill="#7C3AED" opacity="0.85" />
+
+  <!-- Wave accent (bottom) -->
+  <path d="M160 410 Q200 388 240 410 Q280 432 320 410 Q360 388 380 410" 
+        stroke="white" stroke-width="6" fill="none" 
+        stroke-linecap="round" opacity="0.7" />
+
+  <!-- Small sparkle dots -->
+  <circle cx="400" cy="88" r="6" fill="white" opacity="0.8" />
+  <circle cx="420" cy="108" r="4" fill="white" opacity="0.6" />
+  <circle cx="110" cy="400" r="5" fill="white" opacity="0.7" />
+  <circle cx="90" cy="380" r="3" fill="white" opacity="0.5" />
+</svg>
