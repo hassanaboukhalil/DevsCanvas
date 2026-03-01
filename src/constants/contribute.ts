@@ -65,10 +65,10 @@ export const guidelinesContent = {
     { id: 3, text: "Follow existing component patterns" },
   ] as Guideline[],
   linkText: "Read the full contribution guide on GitHub",
-  linkHref: "https://github.com/username/devscanvas",
+  linkHref: "https://github.com/hassanaboukhalil/DevsCanvas",
 };
 
 export const contributeCta = {
   label: "View Repository on GitHub",
-  href: "https://github.com/username/devscanvas",
+  href: "https://github.com/hassanaboukhalil/DevsCanvas",
 };

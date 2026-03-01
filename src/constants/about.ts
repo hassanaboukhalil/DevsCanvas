@@ -9,7 +9,7 @@ export const aboutContent: AboutContent = {
   subtitle: "An open-source toolkit for frontend developers and designers",
   paragraphs: [
     "DevsCanvas provides a suite of free, interactive design generators that help developers create production-ready assets without leaving their browser.",
-    "Built with React, TypeScript, and Tailwind CSS for performance and developer experience.",
+    "Built with Nextjs, TypeScript, and Tailwind CSS for performance and developer experience.",
     "Every line of code is open source. We believe great developer tools should be free, transparent, and community-driven.",
   ],
 };
@@ -23,11 +23,11 @@ export interface CreatorInfo {
 }
 
 export const creatorInfo: CreatorInfo = {
-  name: "Developer",
+  name: "Hassan Abou Khalil",
   role: "Creator of DevsCanvas",
-  initial: "D",
-  githubUrl: "https://github.com/username",
-  linkedinUrl: "https://linkedin.com/",
+  initial: "H",
+  githubUrl: "https://github.com/hassanaboukhalil/",
+  linkedinUrl: "https://www.linkedin.com/in/hassan-abou-khalil/",
 };
 
 export const aboutCta = {

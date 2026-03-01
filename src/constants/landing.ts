@@ -17,7 +17,7 @@ export const heroContent: HeroContent = {
   primaryCta: { label: "Explore Tools", href: "/tools" },
   secondaryCta: {
     label: "View on GitHub",
-    href: "https://github.com/username/devscanvas",
+    href: "https://github.com/hassanaboukhalil/DevsCanvas",
   },
 };
 
@@ -79,5 +79,5 @@ export const ctaSection: CtaSection = {
   description:
     "DevsCanvas is fully open source. Contribute generators, report bugs, or suggest features.",
   buttonLabel: "Contribute on GitHub",
-  buttonHref: "https://github.com/username/devscanvas",
+  buttonHref: "https://github.com/hassanaboukhalil/DevsCanvas",
 };

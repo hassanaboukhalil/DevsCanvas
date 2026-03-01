@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* GitHub link (desktop) */}
       <div className="hidden md:flex items-center">
         <Link
-          href="https://github.com/username/devscanvas"
+          href="https://github.com/hassanaboukhalil/DevsCanvas"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-lg text-(--color-muted) hover:text-(--color-foreground) hover:bg-(--color-background-card) transition-all duration-300"
@@ -74,7 +74,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link
-            href="https://github.com/username/devscanvas"
+            href="https://github.com/hassanaboukhalil/DevsCanvas"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-lg text-(--color-muted) hover:text-(--color-foreground) transition-colors duration-300"

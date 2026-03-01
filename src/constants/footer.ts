@@ -27,7 +27,7 @@ export const footerColumns: FooterColumn[] = [
       {
         id: 1,
         label: "GitHub",
-        href: "https://github.com/username/devscanvas",
+        href: "https://github.com/hassanaboukhalil/DevsCanvas",
       },
     ],
   },
@@ -44,6 +44,6 @@ export const footerBrand = {
 };
 
 export const footerBottom = {
-  left: "Built with React & Tailwind CSS",
+  left: "Built with Nextjs & Tailwind CSS",
   right: "© 2026 DevsCanvas. Open source under MIT License.",
 };
