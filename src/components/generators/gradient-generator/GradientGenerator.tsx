@@ -4,11 +4,7 @@ import GeneratorLayout from "@/components/generators/common/GeneratorLayout";
 import GradientControls from "./GradientControls";
 import GradientPreview from "./GradientPreview";
 import GradientExport from "./GradientExport";
-import {
-  generateGradient,
-  type GradientOptions,
-  type GradientColorStop,
-} from "@/lib/generators/gradient";
+import { generateGradient, type GradientOptions } from "@/lib/generators/gradient";
 import { useMemo, useState } from "react";
 
 const defaultOptions: GradientOptions = {
@@ -28,7 +24,7 @@ const GradientGenerator = () => {
     <GeneratorLayout
       controls={<GradientControls options={options} onChange={setOptions} />}
       preview={<GradientPreview gradient={cssOutput} />}
-      exportPanel={<GradientExport options={options} gradient={cssOutput} />}
+      exportPanel={<GradientExport options={options} />}
     />
   );
 };

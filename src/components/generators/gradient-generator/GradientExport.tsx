@@ -13,10 +13,9 @@ import { useMemo, useState } from "react";
 
 interface GradientExportProps {
   options: GradientOptions;
-  gradient: string;
 }
 
-const GradientExport = ({ options, gradient }: GradientExportProps) => {
+const GradientExport = ({ options }: GradientExportProps) => {
   const [codeType, setCodeType] = useState<"CSS" | "SVG">("CSS");
 
   const cssCode = useMemo(() => generateGradientCSS(options), [options]);
