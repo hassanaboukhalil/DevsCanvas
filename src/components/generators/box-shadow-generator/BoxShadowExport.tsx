@@ -12,10 +12,9 @@ import { useMemo } from "react";
 
 interface BoxShadowExportProps {
   options: BoxShadowOptions;
-  shadow: string;
 }
 
-const BoxShadowExport = ({ options, shadow }: BoxShadowExportProps) => {
+const BoxShadowExport = ({ options }: BoxShadowExportProps) => {
   const cssCode = useMemo(() => generateBoxShadowCSS(options), [options]);
   const tailwindCode = useMemo(
     () => generateBoxShadowTailwind(options),

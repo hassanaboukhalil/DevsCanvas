@@ -1,5 +1,3 @@
-import Badge from "@/components/ui/Badge";
-
 interface ToolCategoryProps {
   category: string;
   active?: boolean;

@@ -33,7 +33,7 @@ const BoxShadowGenerator = () => {
           borderRadius={options.previewBorderRadius}
         />
       }
-      exportPanel={<BoxShadowExport options={options} shadow={shadow} />}
+      exportPanel={<BoxShadowExport options={options} />}
     />
   );
 };
