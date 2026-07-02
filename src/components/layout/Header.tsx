@@ -16,14 +16,15 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
-        scrolled
-          ? "bg-(--color-background)/80 backdrop-blur-md border-b border-(--color-border)"
-          : "bg-transparent",
-      )}
-    >
+    <header className="sticky top-0 z-50 w-full">
+      <div
+        className={cn(
+          "absolute inset-0 -z-10 transition-all duration-300",
+          scrolled
+            ? "bg-(--color-background)/80 backdrop-blur-md border-b border-(--color-border)"
+            : "bg-transparent",
+        )}
+      />
       <Navbar />
     </header>
   );
