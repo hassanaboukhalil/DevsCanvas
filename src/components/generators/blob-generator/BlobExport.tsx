@@ -1,6 +1,7 @@
 "use client";
 
 import ExportPanel from "@/components/generators/common/ExportPanel";
+import { generateSvgReactSnippet } from "@/components/generators/common/svgReactSnippet";
 import { Clipboard, FileCode, Download } from "lucide-react";
 
 interface BlobExportProps {
@@ -22,9 +23,7 @@ const BlobExport = ({ svg }: BlobExportProps) => {
     URL.revokeObjectURL(url);
   };
 
-  const reactComponent = `const BlobShape = () => (
-  <div dangerouslySetInnerHTML={{ __html: \`${svg}\` }} />
-);`;
+  const reactComponent = generateSvgReactSnippet("BlobShape", svg);
 
   const buttons = [
     {
