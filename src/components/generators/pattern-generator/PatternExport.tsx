@@ -1,7 +1,7 @@
 "use client";
 
 import ExportPanel from "@/components/generators/common/ExportPanel";
-import { Clipboard, FileCode, Download } from "lucide-react";
+import { Clipboard, FileCode, Download, Sparkles } from "lucide-react";
 
 interface PatternExportProps {
   svg: string;
@@ -49,6 +49,11 @@ const PatternExport = ({ svg }: PatternExportProps) => {
       label: "Download SVG",
       icon: <Download size={14} />,
       onClick: downloadSVG,
+    },
+    {
+      label: "Copy React Component",
+      icon: <Sparkles size={14} />,
+      onClick: () => copyToClipboard(reactComponent),
     },
   ];
 

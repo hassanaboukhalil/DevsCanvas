@@ -1,6 +1,7 @@
 "use client";
 
 import ExportPanel from "@/components/generators/common/ExportPanel";
+import { generateSvgReactSnippet } from "@/components/generators/common/svgReactSnippet";
 import { Clipboard, FileCode, Download } from "lucide-react";
 
 interface WaveExportProps {
@@ -22,9 +23,7 @@ const WaveExport = ({ svg }: WaveExportProps) => {
     URL.revokeObjectURL(url);
   };
 
-  const reactComponent = `const WaveBackground = () => (
-  <div dangerouslySetInnerHTML={{ __html: \`${svg}\` }} />
-);`;
+  const reactComponent = generateSvgReactSnippet("WaveBackground", svg);
 
   const buttons = [
     {
