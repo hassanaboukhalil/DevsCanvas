@@ -17,7 +17,11 @@ const patternTypes: { value: PatternType; label: string }[] = [
   { value: "diamonds", label: "Diamonds" },
 ];
 
+const sizeOnlyTypes: PatternType[] = ["dots", "diamonds"];
+
 const PatternControls = ({ options, onChange }: PatternControlsProps) => {
+  const usesSize = sizeOnlyTypes.includes(options.type);
+
   const updateOption = <K extends keyof PatternOptions>(
     key: K,
     value: PatternOptions[K],
@@ -42,19 +46,21 @@ const PatternControls = ({ options, onChange }: PatternControlsProps) => {
         </select>
       </div>
 
-      <div className="space-y-2">
-        <label className="text-xs text-(--color-muted)">
-          Size: {options.size}
-        </label>
-        <input
-          type="range"
-          min={1}
-          max={20}
-          value={options.size}
-          onChange={(e) => updateOption("size", Number(e.target.value))}
-          className="w-full accent-(--color-primary)"
-        />
-      </div>
+      {usesSize && (
+        <div className="space-y-2">
+          <label className="text-xs text-(--color-muted)">
+            Size: {options.size}
+          </label>
+          <input
+            type="range"
+            min={1}
+            max={20}
+            value={options.size}
+            onChange={(e) => updateOption("size", Number(e.target.value))}
+            className="w-full accent-(--color-primary)"
+          />
+        </div>
+      )}
 
       <div className="space-y-2">
         <label className="text-xs text-(--color-muted)">
@@ -70,20 +76,22 @@ const PatternControls = ({ options, onChange }: PatternControlsProps) => {
         />
       </div>
 
-      <div className="space-y-2">
-        <label className="text-xs text-(--color-muted)">
-          Stroke Width: {options.strokeWidth}
-        </label>
-        <input
-          type="range"
-          min={0.5}
-          max={5}
-          step={0.5}
-          value={options.strokeWidth}
-          onChange={(e) => updateOption("strokeWidth", Number(e.target.value))}
-          className="w-full accent-(--color-primary)"
-        />
-      </div>
+      {!usesSize && (
+        <div className="space-y-2">
+          <label className="text-xs text-(--color-muted)">
+            Stroke Width: {options.strokeWidth}
+          </label>
+          <input
+            type="range"
+            min={0.5}
+            max={5}
+            step={0.5}
+            value={options.strokeWidth}
+            onChange={(e) => updateOption("strokeWidth", Number(e.target.value))}
+            className="w-full accent-(--color-primary)"
+          />
+        </div>
+      )}
 
       <div className="space-y-2">
         <label className="text-xs text-(--color-muted)">
