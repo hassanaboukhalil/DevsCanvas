@@ -67,12 +67,12 @@ const ColorPaletteExport = ({ colors }: ColorPaletteExportProps) => {
       <ExportPanel buttons={buttons} />
 
       {/* Custom 4-tab code preview */}
-      <div className="flex rounded-lg border border-(--color-border) overflow-hidden">
+      <div className="flex rounded-lg border border-(--color-border) overflow-x-auto">
         {codeTabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`flex-1 px-3 py-1.5 text-xs font-medium transition-all duration-300 cursor-pointer ${
+            className={`shrink-0 px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-all duration-300 cursor-pointer ${
               activeTab === tab
                 ? "bg-(--color-primary) text-white"
                 : "text-(--color-muted) hover:text-(--color-foreground)"
