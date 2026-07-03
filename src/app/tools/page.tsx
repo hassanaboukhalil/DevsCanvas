@@ -3,7 +3,7 @@ import ToolsGrid from "@/components/tools-page/ToolsGrid";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "All Tools — DevsCanvas",
+  title: "All Tools | DevsCanvas",
   description:
     "Browse our collection of free, open-source design generators. Create SVGs, CSS gradients, patterns, and more.",
 };

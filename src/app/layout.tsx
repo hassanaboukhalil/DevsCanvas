@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DevsCanvas — Open-Source Design Generators for Developers",
+  title: "DevsCanvas | Open-Source Design Generators for Developers",
   description:
     "Create beautiful SVG assets, CSS styles, and color palettes. Export production-ready code in seconds. Free and open source.",
   icons: {

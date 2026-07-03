@@ -1,5 +1,7 @@
 # DevsCanvas
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **Live site: [hassanaboukhalil.github.io/DevsCanvas](https://hassanaboukhalil.github.io/DevsCanvas/)**
 
 DevsCanvas is a collection of free, browser-based design tools for developers. Every tool runs entirely client-side — tweak options, preview the result live, and export ready-to-use code as SVG, CSS, Tailwind classes, or a React component.
