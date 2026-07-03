@@ -1,6 +1,8 @@
 # DevsCanvas
 
-DevsCanvas is a collection of free, browser-based design tools for developers. Every tool runs entirely client-side — tweak options, preview the result live, and export ready-to-use SVG or CSS.
+**Live site: [hassanaboukhalil.github.io/DevsCanvas](https://hassanaboukhalil.github.io/DevsCanvas/)**
+
+DevsCanvas is a collection of free, browser-based design tools for developers. Every tool runs entirely client-side — tweak options, preview the result live, and export ready-to-use code as SVG, CSS, Tailwind classes, or a React component.
 
 Built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS v4.
 
@@ -32,6 +34,10 @@ npm run lint    # ESLint
 ```
 
 There is no test suite.
+
+## Deployment
+
+Pushes to `main` automatically build and deploy to GitHub Pages via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) (static export, no server required). Anonymous, cookie-free visit analytics are collected with [GoatCounter](https://www.goatcounter.com/).
 
 ## Project structure
 
