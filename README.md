@@ -49,7 +49,7 @@ Each generator follows the same three-layer pattern:
 2. **Components** — `src/components/generators/<tool>-generator/`, split into `<Tool>Generator.tsx` (state + composition), `<Tool>Controls.tsx`, `<Tool>Preview.tsx`, and `<Tool>Export.tsx`.
 3. **Route** — a thin page at `src/app/tools/<tool>-generator/page.tsx`.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details on adding a new tool, and [CLAUDE.md](CLAUDE.md) for the full architecture reference.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details on adding a new tool.
 
 ## Contributing
 
