@@ -30,6 +30,13 @@ export default function RootLayout({
         <Header />
         <main className="sections-max-width">{children}</main>
         <Footer />
+        {process.env.NEXT_PUBLIC_GOATCOUNTER_CODE && (
+          <script
+            data-goatcounter={`https://${process.env.NEXT_PUBLIC_GOATCOUNTER_CODE}.goatcounter.com/count`}
+            async
+            src="//gc.zgo.at/count.js"
+          />
+        )}
       </body>
     </html>
   );
